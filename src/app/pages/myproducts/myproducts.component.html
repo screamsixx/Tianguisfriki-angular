@@ -1,0 +1,36 @@
+<app-navbar></app-navbar>
+
+
+
+<div *ngFor="let articulo of myproducts" class="container-fluid">
+    <div class="row">
+      <div class="col">
+  
+        <div class="product-view">
+          <div class="product-view-box">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="product-img">
+                  <img src="{{articulo.img}}" alt="Mas barato ni en walmart" width="200" height="200">
+                </div><!-- /.product-img -->
+              </div><!-- /.col-sm-4 -->
+              <div class="col-sm-5">
+                <h6>{{articulo.name}}</h6>
+                <h3>💲{{articulo.price}}</h3>
+  
+                <h6>Descripción:</h6>
+                <p>{{articulo.description}}</p>
+                <h6>Unidades disponibles: </h6>
+                <p>{{articulo.stock}}</p>
+                
+                
+  
+                <button class="btn-danger text-white" (click)="eliminarproducto(articulo.id)">Eliminar</button> <!--envia id encriptado pa borrarlo-->
+              </div><!-- /.col-sm-4 -->
+            </div><!-- /.row -->
+          </div><!-- /.product-view-box -->
+        </div><!-- /.product-view -->
+  
+      </div>
+    </div>
+  </div>

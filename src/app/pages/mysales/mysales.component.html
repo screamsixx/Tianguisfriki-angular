@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+
+<div *ngFor="let articulo of misventas" class="container-fluid">
+    <div class="row">
+      <div class="col">
+  
+        <div class="product-view">
+          <div class="product-view-box">
+            <div class="row">
+              <div class="col-sm-4">
+              </div><!-- /.col-sm-4 -->
+              <div class="col-sm-5">
+                <h6>{{articulo.product}}</h6>
+                <h3>💲{{articulo.price}}</h3>
+                <h6>Comprador:</h6>
+                <p>{{articulo.buyer}} <a href="mailto:{{articulo.buyer}}?Subject=Producto%20{{articulo.product}}%20Tianguisfriki%20#orden%20{{articulo.id}}">📧</a></p>
+                <h6>Dirección de envio: </h6>
+                <p>{{articulo.street}}, {{articulo.city}}</p>
+                <h6>Destinatario:</h6>
+                <p>{{articulo.fullname}}</p>
+                <h6>Id transacción:</h6>
+                <p>{{articulo.id}}</p>
+                
+              </div><!-- /.col-sm-4 -->
+              <div class="product-img">
+                <p>{{articulo.datetime}}</p>
+              </div><!-- /.product-img -->
+            </div><!-- /.row -->
+          </div><!-- /.product-view-box -->
+        </div><!-- /.product-view -->
+  
+      </div>
+    </div>
+  </div>

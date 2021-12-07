@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="card text-center">
+
+    <div class="card-body p-4">
+      <!-- pues comentaré esto por que se ve feo
+      <h6>----------Datos de compra----------</h6>
+      <h6>Id transaccion: {{idventa}}</h6>
+      <h6>Vendedor: {{productos[5]}}</h6>
+      <h6>Producto: {{productos[3]}} </h6>
+      <h6>Precio: ${{productos[4]}} pesos</h6>
+      <h6>----------Datos de envio----------</h6>
+      -->
+      <!--FORM-->
+      <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+        <div class="form">
+
+          <label style="float: left;">Nombre</label>
+          <input type="text" class="form-control m-2" placeholder="Ingresa tu nombre completo" name="fullname" ngModel required/>
+          <label style="float: left;">Dirección</label>
+          <input type="text" class="form-control m-2" placeholder="Ingresa tu calle y numero de casa" name="street" ngModel required/>
+          <label style="float: left;">Ciudad</label>
+          <input type="text" class="form-control m-2" placeholder="Ingresa tu ciudad" name="city" ngModel required/>
+          <button class="btn btn-primary btn-block" ngNativeValidate type="submit">Realizar pedido</button>
+        </div>
+      </form>
+      <!--ENDFORM-->
+    </div>
+    <div class="card-header">
+
+      <img src="assets/img/pack.png" width="250" height="250" class="d-inline-block align-top" alt="">
+    </div>
+  </div>
+</div>

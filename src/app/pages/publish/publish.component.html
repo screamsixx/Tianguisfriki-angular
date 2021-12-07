@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+
+<form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+    <div class="form">
+        <p></p>
+        <label><b>Nombre</b></label>
+        <input type="text" name="name" ngModel required />
+        <label><b>Descripción</b></label>
+        <textarea name="description" ngModel required></textarea>
+        <label><b>Precio</b></label>
+        <input type="number" min="1" placeholder="$$" name="price" ngModel required/>
+        <label><b>Url de la imagen</b></label>
+        <input type="text" placeholder="?.jpg" name="img" ngModel required />
+        <label><b>Stock</b></label>
+        <input type="number" placeholder="? unidades" min="1" max="50" name="stock" ngModel required/>
+        <!--hidden seller-->
+        <label><b>Vendedor</b></label>
+        <input type="text" name="seller" value="{{vendedor}}" ngModel required disabled>
+        <!--vendedor dato oculto-->
+        <!--hidden id-->
+        <label><b>Id autogenerado</b></label>
+        <input type="text" name="id" value="{{randomid}}" ngModel required disabled>
+        <!--id random oculto-->
+        <button ngNativeValidate type="submit">Guardar producto</button>
+    </div>
+</form>
