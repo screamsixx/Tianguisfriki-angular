@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<div *ngFor="let producto of mibusqueda" class="grid">
+    <div class="list-item">
+      <div class="product">
+        <img src="{{producto.img}}" width="200" height="150" />
+        <b>
+          <h6>{{producto.name}}</h6>
+        </b>
+        <h6>{{producto.description}}</h6>
+        <p>💲 {{producto.price}} pesos</p>
+        <a routerLink="/product/{{producto.id}}">➡</a>
+      </div>
+    </div>
+  </div>

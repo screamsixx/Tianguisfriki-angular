@@ -45,4 +45,14 @@ export class NavbarComponent implements OnInit {
     });
     
   }
+
+  onCreatePost(postData ={search:""}) {
+    
+    if(postData.search!=""){ //busqueda diferente de blanco
+      console.log("search: ",postData.search);
+      this.router.navigate(['/searchs',postData.search]);
+
+    }
+}
+
 }

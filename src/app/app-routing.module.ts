@@ -11,6 +11,7 @@ import { BuyComponent } from './pages/buy/buy.component';
 import { BoughtitComponent } from './pages/boughtit/boughtit.component';
 import { MysalesComponent } from './pages/mysales/mysales.component';
 import { ErrorpageComponent } from './pages/errorpage/errorpage.component';
+import { SearchsComponent } from './pages/searchs/searchs.component';
 const routes: Routes = [
   
 {path: '', component:LoginComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
 {path: 'buy/:param', component:BuyComponent}, //recibe parametros
 {path: 'boughtit/:param', component:BoughtitComponent}, //tambien recibe parametro osea quien es el cliente
 {path: 'mysales/:param', component:MysalesComponent}, //parametro pa saber mis ventas osea que usuario
+{path: 'searchs/:param',component:SearchsComponent}, //busquedas
 //pagina error404
 { path: '**', pathMatch: 'full', 
 component: ErrorpageComponent }
