@@ -8,4 +8,5 @@ export interface Listasales{
     product:string;
     seller:string;
     street:string;
+    img:string;
     }

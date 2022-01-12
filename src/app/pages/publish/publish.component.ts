@@ -40,12 +40,15 @@ export class PublishComponent implements OnInit {
  
   
 
-  onCreatePost(postData ={description:"", id:"", img:"", name:"", price:"", seller:"", stock:""}) {
+  onCreatePost(postData ={description:"", id:"", img:"", name:"", price:"", seller:"", stock:"", category:""}) {
     postData.id=this.randomid;
     postData.seller=this.vendedor;
     console.log("datos enviados",postData);
     // Send Http request
     let enviar=true;
+    if(postData.category==""){
+enviar=false;
+    }
     if(postData.name==""){
       enviar=false;
     }

@@ -12,12 +12,16 @@ import { BoughtitComponent } from './pages/boughtit/boughtit.component';
 import { MysalesComponent } from './pages/mysales/mysales.component';
 import { ErrorpageComponent } from './pages/errorpage/errorpage.component';
 import { SearchsComponent } from './pages/searchs/searchs.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { StatsComponent } from './pages/stats/stats.component';
 const routes: Routes = [
   
 {path: '', component:LoginComponent},
 {path: 'signup', component:SignupComponent},
+{path: 'profile/:param', component:ProfileComponent},
 {path: 'products', component:ProductsComponent},
 {path: 'product/:param', component:ProductComponent}, //recibe parametros
+{path: 'stats/:param', component:StatsComponent}, //stadisticas con parametros
 {path: 'publish', component:PublishComponent},
 {path: 'myproducts/:param', component:MyproductsComponent}, //recibe parametros
 {path: 'buy/:param', component:BuyComponent}, //recibe parametros
@@ -31,7 +35,9 @@ component: ErrorpageComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { useHash: true }),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

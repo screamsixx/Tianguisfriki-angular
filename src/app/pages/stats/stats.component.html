@@ -1,0 +1,93 @@
+<app-navbar></app-navbar>
+<div class="print"> <!---print-->
+    
+    
+
+<div class="row">
+  
+    <div class="col">
+
+      <div class="product-view">
+        
+        <div class="product-view-box">
+          <button (click)="onPrint()">🖨️</button>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="product-img">
+                <img src="https://png.pngtree.com/png-clipart/20190922/original/pngtree-calculator-icon-design-png-image_4771983.jpg" alt="vendedor" width="200" height="200">
+              </div><!-- /.product-img -->
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-5">
+              <!-----aqui poner todo lo del vendedor-->
+            <h6>Estadisticas de {{parametrocomprador}}</h6>
+            <br>
+            <h6>--Articulos comprados: {{numerodecompras}}</h6>
+            <br>
+            <h6>--Articulos vendidos: {{numerodeventas}}</h6>
+            <br>
+            <h6>--Opiniones recibidas: {{numerodeopiniones}}</h6>
+            </div><!-- /.col-sm-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.product-view-box -->
+      </div><!-- /.product-view -->
+
+    </div>
+  </div>
+
+    <!--tu calificacion como vendedor-->
+    <div class="row">
+      <div class="col">
+  
+        <div class="product-view">
+          <div class="product-view-box">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="product-img">
+                  <img src="{{imgpromedio}}" alt="vendedor" width="200" height="200">
+                </div><!-- /.product-img -->
+              </div><!-- /.col-sm-4 -->
+              <div class="col-sm-5">
+                <!-----aqui poner todo lo del vendedor-->
+              <h6>En este sitio tienes una reputación de {{solopromedio}} puntos,</h6>
+              <h6>continua siendo amable y respetuoso con los clientes</h6>
+              
+              </div><!-- /.col-sm-4 -->
+            </div><!-- /.row -->
+          </div><!-- /.product-view-box -->
+        </div><!-- /.product-view -->
+  
+      </div>
+    </div>
+  
+    <!--fincal-->
+
+  <!--tus ventas frente al resto-->
+  <div class="row">
+    <div class="col">
+
+      <div class="product-view">
+        <div class="product-view-box">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="product-img">
+                <img src="{{laimg}}" alt="vendedor" width="200" height="200">
+              </div><!-- /.product-img -->
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-5">
+              <!-----aqui poner todo lo del vendedor-->
+            <h6>En este sitio se han vendido {{numerodeventasenelsitio}} productos,</h6>
+            <h6>tus ventas representan el: {{porcentajedeventasfrentealsitio}}% del total de ventas</h6>
+            
+            </div><!-- /.col-sm-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.product-view-box -->
+      </div><!-- /.product-view -->
+
+    </div>
+  </div>
+
+  <!--fintusventas-->
+  
+
+</div> <!--printend-->
+

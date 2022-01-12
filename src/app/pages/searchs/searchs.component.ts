@@ -12,7 +12,7 @@ export class SearchsComponent implements OnInit {
   productos: Listaproductos[] = [];
   mibusqueda:Listaproductos[]=[];
   constructor(private api:ProductsService, private activeroute:ActivatedRoute) { }
-  private parametro="";
+   parametro="";
    
    
 
@@ -23,8 +23,11 @@ export class SearchsComponent implements OnInit {
       console.log("resp: ", resp);
       for(let i in resp){
         let x=resp[i].name.toLowerCase(); //rep a minuscula
-        
-        if(x.includes(this.parametro)){ //si entra aqui sabremos que se encontro tal producto
+        let cat=resp[i].category.toLowerCase();
+        if(x.includes(this.parametro)){ //si entra aqui sabremos que se encontro tal producto en los nombres
+          console.log("se encontro:", resp[i].name);
+          this.mibusqueda.push(resp[i]);//y aqui se guardará
+        }else if(cat.includes(this.parametro)){ //si entra aqui sabremos que se encontro el producto en categorias
           console.log("se encontro:", resp[i].name);
           this.mibusqueda.push(resp[i]);//y aqui se guardará
         }

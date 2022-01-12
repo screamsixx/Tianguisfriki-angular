@@ -53,7 +53,7 @@ export class BuyComponent implements OnInit {
    * [5] -> seller
    * [6] -> stock
    */
-  onCreatePost(postData = { buyer: "", city: "", fullname: "", id: "", price: "", product: "", seller: "", street: "", datetime: "" }) {
+  onCreatePost(postData = { buyer: "", city: "", fullname: "", id: "", price: "", product: "", seller: "", street: "", datetime: "", img:"" }) {
     //funciones fecha
     let today = new Date();
     let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
@@ -65,6 +65,7 @@ export class BuyComponent implements OnInit {
     postData.product = zzz[3];
     postData.seller = zzz[5];
     postData.price = zzz[4]
+    postData.img=zzz[2]; //aqui es la imagen
     postData.id = this.idventa; //id random nuevo generado para esta venta
     postData.buyer = this.cliente;
     let valor = true;

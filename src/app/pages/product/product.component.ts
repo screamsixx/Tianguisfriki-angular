@@ -43,6 +43,7 @@ export class ProductComponent implements OnInit {
     for(let z in this.indiceencriptado){
       if(this.indiceencriptado[z].id ==parametroid){
         console.log("indice encriptado restapi: ", z); //encontrar el indice encriptado
+
         this.router.navigate(['/buy/', z]);
       }
     }

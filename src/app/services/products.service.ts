@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ProductsService {
-  url:string ="http://marketplace-10b84-default-rtdb.firebaseio.com/products.json";
+  url:string ="https://marketplace-10b84-default-rtdb.firebaseio.com/products.json";
 
   constructor(private http:HttpClient) { }
 

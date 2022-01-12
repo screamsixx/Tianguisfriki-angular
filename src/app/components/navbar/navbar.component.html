@@ -10,19 +10,28 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto topnav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/publish">Publicar producto</a>
+                    <a class="nav-link" routerLink="/publish">Publicar producto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/myproducts/{{vendedor}}">Administrar publicaciones</a>
+                    <a class="nav-link" routerLink="/myproducts/{{vendedor}}">Administrar publicaciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/boughtit/{{vendedor}}">Mis compras</a>
+                    <a class="nav-link" routerLink="/boughtit/{{vendedor}}">Compras</a>
                     
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/mysales/{{vendedor}}">Mis ventas</a>
+                    <a class="nav-link" routerLink="/mysales/{{vendedor}}">Ventas</a>
                     
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/profile/{{vendedor}}">Perfil</a>
+                    
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/stats/{{vendedor}}">Estadisticas</a>
+                    
+                </li>
+                
 
                 <li class="nav-item">
                     <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">

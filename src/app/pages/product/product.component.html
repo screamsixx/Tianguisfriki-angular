@@ -17,7 +17,7 @@
               <h6>Descripción:</h6>
               <p>{{articulo.description}}</p>
               <h6>Vendedor: </h6>
-              <p>{{articulo.seller}}</p>
+              <p><a routerLink="/profile/{{articulo.seller}}">{{articulo.seller}}</a></p>
               <h6>Unidades disponibles: </h6>
               <p id="elstock">{{articulo.stock}}</p>
               <button><a

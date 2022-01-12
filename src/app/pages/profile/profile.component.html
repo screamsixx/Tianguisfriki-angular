@@ -1,0 +1,67 @@
+<app-navbar></app-navbar>
+<div class="row">
+    <div class="col">
+
+      <div class="product-view">
+        <div class="product-view-box">
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="product-img">
+                <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/retailer-store-907080.png" alt="vendedor" width="200" height="200">
+              </div><!-- /.product-img -->
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-5">
+              <!-----aqui poner todo lo del vendedor-->
+            <h6>Bienvenido al perfil de {{parametrocomprador}}</h6>
+            <h6>Sientete libre de dejar un comentario, <br>
+                todo sera anonimo
+            </h6>
+
+            <!--Comentarios inicio-->
+            <form #postForm="ngForm" (ngSubmit)="onCreatePost(postForm.value)">
+              <div class="form">
+                <input type="number" name="score" placeholder="puntuación de 1 a 10" ngModel required />
+                <input type="text" name="opinion" placeholder="comentario" ngModel required />
+                  <button ngNativeValidate type="submit">💬</button>
+              </div>
+          </form>
+            <!--Comentarios fin-->
+            </div><!-- /.col-sm-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.product-view-box -->
+      </div><!-- /.product-view -->
+
+    </div>
+  </div>
+
+
+  <!--COMENTARIOS AQUI-->
+  
+  <div *ngFor="let op of lasopiniones" class="container-fluid">
+    <div class="row">
+      <div class="col">
+  
+        <div class="product-view">
+          <div class="comentariopitero">
+            <div class="row">
+              <div class="col-sm-4">
+              </div><!-- /.col-sm-4 -->
+              <div class="col-sm-5">
+                <br>
+                <br>
+                <br>
+                <h6>Usuario Anonimo dice:</h6>
+                <p>
+                  {{op.opinion}}
+                </p>
+                
+                
+              </div><!-- /.col-sm-4 -->
+              
+            </div><!-- /.row -->
+          </div><!-- /.product-view-box -->
+        </div><!-- /.product-view -->
+  
+      </div>
+    </div>
+  </div>

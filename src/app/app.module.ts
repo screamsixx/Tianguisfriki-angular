@@ -19,6 +19,8 @@ import { BoughtitComponent } from './pages/boughtit/boughtit.component';
 import { MysalesComponent } from './pages/mysales/mysales.component';
 import { ErrorpageComponent } from './pages/errorpage/errorpage.component';
 import { SearchsComponent } from './pages/searchs/searchs.component';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { StatsComponent } from './pages/stats/stats.component';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBwFHvkOXlJAFx7gVLlna5vF2G0t_ZbLN4",
@@ -46,6 +48,8 @@ const firebaseConfig = {
     MysalesComponent,
     ErrorpageComponent,
     SearchsComponent,
+    ProfileComponent,
+    StatsComponent,
     
     
   ],
