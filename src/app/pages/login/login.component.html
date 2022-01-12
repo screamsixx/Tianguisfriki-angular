@@ -7,15 +7,21 @@
   
       </div>
       <div class="card-body p-4">
-        <label style="float: left;">Email</label>
+        
+        <button class="btn btn-info btn-block" (click)="IngresarConGoogle()">Ingresar con Google.com</button>
+        
+        
+        
+        <!-- Dejaré esto aqui para mas tarde
+
+          <label style="float: left;">Email</label>
         <input type="email" class="form-control m-2" placeholder="Ingresa email" name="" id="" [(ngModel)]="usuario.email" required>
         <label style="float: left;">Contraseña</label>
         <input type="password" class="form-control m-2" placeholder="Ingresa contraseña" name="" id="" [(ngModel)]="usuario.password" required>
         <button class="btn btn-primary btn-block" (click)="Ingresar()">Ingresar</button>
-        <button class="btn btn-info btn-block" (click)="IngresarConGoogle()">Ingresar con Google.com</button>
-        <label>No estas registrado? <a routerLink="/signup">Registrarse</a></label>
-        
-        <!-- Dejaré esto aqui para mas tarde
+          <label>No estas registrado? <a routerLink="/signup">Registrarse</a></label>
+        ----
+
           <div>
           
          

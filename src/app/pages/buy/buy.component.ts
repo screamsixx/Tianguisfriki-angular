@@ -45,13 +45,14 @@ export class BuyComponent implements OnInit {
   }
   /**
    * hago miles de mexicanadas por que no se usar json
-   * [0] -> description
-   * [1] -> id
-   * [2] -> img
-   * [3] -> name
-   * [4] -> price
-   * [5] -> seller
-   * [6] -> stock
+   * [0] -> Categoria
+   * [1] -> Descripcion
+   * [2] -> un id
+   * [3] -> img
+   * [4] -> nombre
+   * [5] -> precio
+   * [6] -> vendedor
+   * [7] -> stock
    */
   onCreatePost(postData = { buyer: "", city: "", fullname: "", id: "", price: "", product: "", seller: "", street: "", datetime: "", img:"" }) {
     //funciones fecha
@@ -62,10 +63,11 @@ export class BuyComponent implements OnInit {
 
     let zz = JSON.stringify((this.productos));
     let zzz = JSON.parse(zz);
-    postData.product = zzz[3];
-    postData.seller = zzz[5];
-    postData.price = zzz[4]
-    postData.img=zzz[2]; //aqui es la imagen
+    console.log("triplez",zzz);
+    postData.product = zzz[4];
+    postData.seller = zzz[6];
+    postData.price = zzz[5]
+    postData.img=zzz[3]; //aqui es la imagen
     postData.id = this.idventa; //id random nuevo generado para esta venta
     postData.buyer = this.cliente;
     let valor = true;
@@ -90,7 +92,7 @@ export class BuyComponent implements OnInit {
           //en este fragmento se hace un update al producto
           let path = "https://marketplace-10b84-default-rtdb.firebaseio.com/products/" + this.parametroid + ".json";
           let update = { stock: "" };
-          let u = (Number(zzz[6])) - (Number(1));
+          let u = (Number(zzz[7])) - (Number(1));
           update.stock = (u.toString());
 
           this.http.patch(path, update).subscribe(resp => {

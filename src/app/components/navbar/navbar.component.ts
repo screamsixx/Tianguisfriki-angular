@@ -25,7 +25,7 @@ export class NavbarComponent implements OnInit {
     this.authService.getUserLogged().subscribe(resp=>{
       console.log(resp?.email);
       if(resp?.email==null){ //que hay sesion
-        this.router.navigate(['/', 'signup']);
+        this.router.navigate(['/', '']);
       }
     });
   }
